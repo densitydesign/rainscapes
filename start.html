@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Rainscapes - Start</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS Animations-->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- custom google font-->
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class="body-start">
+
+    <div class="container-fluid">
+
+        <div class="col-centered" id="box">
+          <div class="row">
+            <div class="col-xs-12 col-md-12 col-sm-12" id="select-start">Select a state to start</div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-4 col-sm-4 select-state">
+              <a href="washington.html">
+                <div>Washington</div>
+                <div id="washington"></div>
+              </a>
+            </div>
+            <div class="col-xs-12 col-md-4 col-sm-4 select-state">
+              <a href="oregon.html">
+                <div>Oregon</div>
+                <div id="oregon"></div>
+              </a>
+            </div>
+            <div class="col-xs-12 col-md-4 col-sm-4 select-state">
+              <a href="california.html">
+                <div>California</div>
+                <div id="california"></div>
+              </a>
+            </div>
+          </div> 
+        </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.select-state').each(function() {
+          animationHover(this, 'pulse');
+          });
+      });
+
+      function animationHover(element, animation){
+        element = $(element);
+        element.hover(
+        function() {
+          element.addClass('animated ' + animation);        
+        },
+        function(){
+          //wait for animation to finish before removing classes
+          window.setTimeout( function(){
+            element.removeClass('animated ' + animation);
+            }, 2000);         
+        });
+      }
+    </script>
+  </body>
+</html>

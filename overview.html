@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Fixed Top Navbar Example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
+    <!-- custom google font-->
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class="back-overview">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container custom-nav">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><div class="rain">RAIN</div><div class="scapes">SCAPES</div></a>
+        </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown custom-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">OVERVIEW <i class="fa fa-bars hamburger"></i></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="washington.html" class="dropdown-state washington">WASHINGTON</a></li>
+                <li><a href="oregon.html" class="dropdown-state oregon">OREGON</a></li>
+                <li><a href="california.html" class="dropdown-state california">CALIFORNIA</a></li>
+                <li><a href="overview.html" class="dropdown-state overview selected">OVERVIEW</a></li>
+                <li class="divider"></li>
+                <li><a href="about.html" class="dropdown-state about">ABOUT</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+    </div>
+
+<div class="row container-fluid">
+  <div class="container">
+     <div class="col-sm-4 col-md-6 col-lg-6 align-left-overview">
+      <p class="intro-overview"> Weather on the west coast has radically different densities and patterns.<br> This heat-map gives a comprehensive view of all states trends through <br> the considered time span.* <br> Some typical climate effects, such as the the rain shadow effect or the are clearly visible such as the precipitation frequency gap between the northern and southern west coast.</p>
+    </div>
+  </div>
+</div>
+<div class="row container-fluid">
+  <div class="container">
+     <div class="col-sm-4 col-md-4 col-lg-4 align-left-overview">
+       <p> <span class="overview-title"> WASHINGTON </span><br> <span class="overview-subtitle"> data points: </span> <span class="overview-point">216 </span> </p>
+       <p class="finding">Max. 56.257 <span class="finding-coord">in → Lat 47°61' N / Lon -123°43' W <br> Min. 5.44 in → Lat 46°67' N / Lon -120° W </span></p>
+       <p class="states-overview"> <span class="overview-title"> OREGON </span><br> <span class="overview-subtitle"> data points: </span> <span class="overview-point">263</span> </p>
+       <p class="finding"> Max. 41.774 in → Lat 45°42' N / Lon -123°43' W <br> Min. 5.933 in → Lat 42°61' N / Lon -117°5' W </p>
+      <p class="states-overview"> <span class="overview-title"> CALIFORNIA </span><br> <span class="overview-subtitle"> data points: </span> <span class="overview-point">423</span> </p>
+       <p class="finding"> Max. 37.733 in → Lat 41°99' N / Lon -124°06' W <br> Min. 1.196 in → Lat 32°93' N / Lon -115°62' W </p>
+       <img src="./img/gradient.svg" align="left" class="gradient" alt>
+       </div>
+     </div>
+   </div>
+       <div class="row container-fluid">
+        <div class="container">
+         <div class="col-sm-1 col-md-2 col-lg-3 align-left-overview">
+       <p class="legenda"> <span class="legenda-bold"> Size and color intensity </span>  <span class="legenda-text">of each data-point on the map represents the total amount of rain in that point for10 years. All values are normalized from 0 to 1. <br> * Missing data on empty stripes.</span></p>
+     </div>
+    </div>  
+  </div>
+
+    <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

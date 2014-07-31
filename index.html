@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Rainscapes - Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS Animations-->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- custom google font-->
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class="body-index">
+
+    <div class="container">
+
+        <div class="container-fluid">
+
+            <div class="col-centered">
+                <div class="row" id="intro_top">
+                    <p class="text-center"> 10 YEARS <span id="of">of</span> WEST COAST <br>RAINY WEATHER</p>
+                </div>
+                <div class="row" id="title">
+                    <div class="rain">RAIN</div><div class="scapes">SCAPES</div>
+                </div>
+                <div class="row" id="intro_bottom">
+                    <p>A project developed for Weather Analytics<br>Climate Crush competition<br>by DensityDesign Lab</p>
+                </div>
+                <a href="start.html" id="start-button">
+                    <div class="row" class="col-centered" id="start">
+                        START
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+
+      $(document).ready(function(){
+        $('#start').each(function() {
+          animationHover(this, 'pulse');
+          });
+      });
+
+      function animationHover(element, animation){
+        element = $(element);
+        element.hover(
+        function() {
+          element.addClass('animated ' + animation);
+        },
+        function(){
+          //wait for animation to finish before removing classes
+          window.setTimeout( function(){
+            element.removeClass('animated ' + animation);
+            }, 2000);         
+        });
+      }
+    </script>
+  </body>
+</html>
