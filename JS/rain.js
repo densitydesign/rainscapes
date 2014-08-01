@@ -185,6 +185,8 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
 
 
 
+
+
     map.selectAll("image")
         .data(tiles)
         .enter().append("image")
