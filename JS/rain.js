@@ -277,12 +277,11 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             .attr("dy",3)
             .style("fill","white")
             .style("stroke","none")
-            //.style("font-weight",300)
             //.style("font-size",12)
             .style("font-family","'Roboto',Serif")
             .text(function(){
                 if(i==0) return "Hail"
-                else if(i==1) return "Thunderstorm"
+                else if(i==1) return "Thunderstom"
                 else if(i==2) return "Wildfire"
                 else if(i==3) return "Drought"
                 else return "Hurricane"
@@ -297,7 +296,7 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             .attr("width",7)
             .attr("height",7)
             .style("stroke","none")
-            .style('fill',function(){
+             .style('fill',function(){
                 if(i==0) return "#A17DC6"
                 else if(i==1) return "#05918A"
                 else if(i==2) return "#F9B318"
@@ -321,7 +320,7 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             else if(e.EVENT_TYPE==="Tornado") return height-160+85;
         })
 
-        .style("fill",function(e){
+         .style("fill",function(e){
             if(e.EVENT_TYPE==="Hail") return "#A17DC6";
             else if(e.EVENT_TYPE==="Thunderstorm Wind") return "#05918A";
             else if(e.EVENT_TYPE==="Wildfire") return "#F9B318";
@@ -518,7 +517,7 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
 
 
 
-                d3.select(this)
+               cursorg
                     .attr("transform", "translate(" + xdrag + "," + (height-110) + ")")
 
                 var dat = timescale.invert(xdrag)
@@ -705,13 +704,13 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             .attr("cy",0)
             .attr("r",3)
             .attr("transform",function(e){return "translate("+projection([parseFloat(e.BEGIN_LON), parseFloat(e.BEGIN_LAT)])+")rotate(45)"})
-            .style("fill",function(e){
-                if(e.EVENT_TYPE==="Hail") return "#A17DC6";
-                else if(e.EVENT_TYPE==="Thunderstorm Wind") return "#05918A";
-                else if(e.EVENT_TYPE==="Wildfire") return "#F9B318";
-                else if(e.EVENT_TYPE==="Drought") return "#C16556";
-                else if(e.EVENT_TYPE==="Tornado") return "#21496D";
-            })
+             .style("fill",function(e){
+            if(e.EVENT_TYPE==="Hail") return "#A17DC6";
+            else if(e.EVENT_TYPE==="Thunderstorm Wind") return "#05918A";
+            else if(e.EVENT_TYPE==="Wildfire") return "#F9B318";
+            else if(e.EVENT_TYPE==="Drought") return "#C16556";
+            else if(e.EVENT_TYPE==="Tornado") return "#21496D";
+        })
             .attr("stroke","none")
             //.style('fill', 'url(#vertical)')
             .attr("stroke-width",2)
