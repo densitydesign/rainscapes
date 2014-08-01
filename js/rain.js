@@ -184,8 +184,8 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
         .enter().append("image")
         .attr("xlink:href", function(d) { return "http://api.tiles.mapbox.com/v2/mariasilvia.ip2o67pb/" + d[2] + "/" + d[0] + "/" + d[1] + ".jpg"; })
        // .attr("xlink:href", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 4 | 0] + ".tiles.mapbox.com/v2/mapbox.natural-earth-2/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
-        .attr("width", parseInt(Math.round(tiles.scale)))
-        .attr("height", Math.round(tiles.scale))
+        .attr("width", parseInt(Math.round(tiles.scale))+1)
+        .attr("height", Math.round(tiles.scale)+1)
         .attr("x", function(d) { return parseInt(Math.round((d[0] + tiles.translate[0]) * tiles.scale)); })
         .attr("y", function(d) { return parseInt(Math.round((d[1] + tiles.translate[1]) * tiles.scale)); });
 
