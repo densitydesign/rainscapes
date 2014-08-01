@@ -494,7 +494,7 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
                     d3.select(".timelbl").text(function(){return d.getDate()+"/"+ (d.getMonth()+1)+"/"+d.getFullYear()})
 
 
-               cursorg
+        cursorg
                     .attr("transform", "translate(" + (xdrag) + "," + (height-110) + ")")
             }
         })
@@ -518,7 +518,7 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
 
 
 
-                d3.select(this)
+                cursorg
                     .attr("transform", "translate(" + xdrag + "," + (height-110) + ")")
 
                 var dat = timescale.invert(xdrag)
