@@ -267,8 +267,8 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             .attr("y1",height-160+i*20+10)
             .attr("x2",timescale(ext[1]))
             .attr("y2",height-160+i*20+10)
-            .style("stroke-width",0.1)
-            .style("opacity",0.9)
+            .style("stroke-width",1)
+            .style("opacity",0.3)
             .style("stroke","#333")
 
         interface.append("text")
