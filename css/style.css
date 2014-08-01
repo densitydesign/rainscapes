@@ -660,8 +660,11 @@ rect.cursor, path.player {
     background-color:#fff;
     width:100%;
     height:100%;
-    position: relative;
+    position:absolute;
     z-index:1;
+    top:0;
+    left:0;
+
 }
 
 /* END MAP VISUALIZATION */
