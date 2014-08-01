@@ -96,9 +96,6 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
 
     if(error) console.log("error");
 
-
-
-
     var map = svg.append("g")
         .attr("class","map")
 
@@ -173,27 +170,22 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
         .zoomDelta((window.devicePixelRatio || 1) - .5);
 
     var tiles = tile();
+	
 
-
-    $(".loading").animate({opacity: 0}, function() {
+ $(".loading").animate({opacity: 0}, function() {
         $(this).remove()
     });
 
     $(".loading-white").animate({opacity: 0}, function() {
         $(this).remove()
     });
-
-
-
-
-
     map.selectAll("image")
         .data(tiles)
         .enter().append("image")
         .attr("xlink:href", function(d) { return "http://api.tiles.mapbox.com/v2/mariasilvia.ip2o67pb/" + d[2] + "/" + d[0] + "/" + d[1] + ".jpg"; })
        // .attr("xlink:href", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 4 | 0] + ".tiles.mapbox.com/v2/mapbox.natural-earth-2/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
-        .attr("width", parseInt(Math.round(tiles.scale)))
-        .attr("height", Math.round(tiles.scale))
+        .attr("width", parseInt(Math.round(tiles.scale))+1)
+        .attr("height", Math.round(tiles.scale)+1)
         .attr("x", function(d) { return parseInt(Math.round((d[0] + tiles.translate[0]) * tiles.scale)); })
         .attr("y", function(d) { return parseInt(Math.round((d[1] + tiles.translate[1]) * tiles.scale)); });
 
@@ -285,11 +277,12 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             .attr("dy",3)
             .style("fill","white")
             .style("stroke","none")
+            //.style("font-weight",300)
             //.style("font-size",12)
-            .style("font-family","'Crimson+Text',Serif")
+            .style("font-family","'Roboto',Serif")
             .text(function(){
                 if(i==0) return "Hail"
-                else if(i==1) return "Thunderstom"
+                else if(i==1) return "Thunderstorm"
                 else if(i==2) return "Wildfire"
                 else if(i==3) return "Drought"
                 else return "Hurricane"
@@ -301,15 +294,15 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             .attr("x",0)
             .attr("y",0)
             .attr("transform","translate("+(timescale(ext[0])-10)+","+(height-161+i*20+5)+")rotate(45)")
-            .attr("width",10)
-            .attr("height",10)
+            .attr("width",7)
+            .attr("height",7)
             .style("stroke","none")
             .style('fill',function(){
-                if(i==0) return "#367085"
-                else if(i==1) return "#554B79"
-                else if(i==2) return "#F27338"
-                else if(i==3) return "#FEAE22"
-                else return "#81969B"
+                if(i==0) return "#A17DC6"
+                else if(i==1) return "#05918A"
+                else if(i==2) return "#F9B318"
+                else if(i==3) return "#C16556"
+                else return "#21496D"
             })
  
 
@@ -329,11 +322,11 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
         })
 
         .style("fill",function(e){
-            if(e.EVENT_TYPE==="Hail") return "#367085";
-            else if(e.EVENT_TYPE==="Thunderstorm Wind") return "#554B79";
-            else if(e.EVENT_TYPE==="Wildfire") return "#F27338";
-            else if(e.EVENT_TYPE==="Drought") return "#FEAE22";
-            else if(e.EVENT_TYPE==="Tornado") return "#81969B";
+            if(e.EVENT_TYPE==="Hail") return "#A17DC6";
+            else if(e.EVENT_TYPE==="Thunderstorm Wind") return "#05918A";
+            else if(e.EVENT_TYPE==="Wildfire") return "#F9B318";
+            else if(e.EVENT_TYPE==="Drought") return "#C16556";
+            else if(e.EVENT_TYPE==="Tornado") return "#21496D";
         })
         .attr("width",1)
         .attr("height",8)
@@ -712,12 +705,12 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             .attr("cy",0)
             .attr("r",3)
             .attr("transform",function(e){return "translate("+projection([parseFloat(e.BEGIN_LON), parseFloat(e.BEGIN_LAT)])+")rotate(45)"})
-            .attr("fill",function(e){
-                if(e.EVENT_TYPE==="Hail") return "#367085";
-                else if(e.EVENT_TYPE==="Thunderstorm Wind") return "#554B79";
-                else if(e.EVENT_TYPE==="Wildfire") return "#F27338";
-                else if(e.EVENT_TYPE==="Drought") return "#FEAE22";
-                else if(e.EVENT_TYPE==="Tornado") return "#81969B";
+            .style("fill",function(e){
+                if(e.EVENT_TYPE==="Hail") return "#A17DC6";
+                else if(e.EVENT_TYPE==="Thunderstorm Wind") return "#05918A";
+                else if(e.EVENT_TYPE==="Wildfire") return "#F9B318";
+                else if(e.EVENT_TYPE==="Drought") return "#C16556";
+                else if(e.EVENT_TYPE==="Tornado") return "#21496D";
             })
             .attr("stroke","none")
             //.style('fill', 'url(#vertical)')
