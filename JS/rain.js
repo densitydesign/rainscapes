@@ -96,6 +96,9 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
 
     if(error) console.log("error");
 
+
+
+
     var map = svg.append("g")
         .attr("class","map")
 
@@ -170,6 +173,17 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
         .zoomDelta((window.devicePixelRatio || 1) - .5);
 
     var tiles = tile();
+
+
+    $(".loading").animate({opacity: 0}, function() {
+        $(this).remove()
+    });
+
+    $(".loading-white").animate({opacity: 0}, function() {
+        $(this).remove()
+    });
+
+
 
     map.selectAll("image")
         .data(tiles)
