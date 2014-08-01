@@ -521,7 +521,7 @@ div#start.row:hover{
 .vip-states {
     /*fill:#9ef;*/
     fill:none;
-    stroke:#f77;
+    stroke:#e96633;
     opacity:0.5;
     stroke-width:2px;
 }
@@ -529,7 +529,7 @@ div#start.row:hover{
 .vip-counties{
      /*fill:#9ef;*/
      fill:none;
-     stroke:#f77;
+     stroke:#e96633;
      opacity:0.3;
      stroke-width:1px;
 }
