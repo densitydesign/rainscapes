@@ -384,7 +384,7 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
     barchart.append("text")
         .text("States comparison")
         .attr("text-anchor","middle")
-        .style("font-family","'Crimson+Text',serif")
+        .style("font-family","'Crimson Text',serif")
         .style("font-size",12)
         .style("fill","#333")
         .attr("y",-30)
@@ -419,7 +419,7 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             else return "#333"
         })
         .style("stroke","none")
-        .style("font-family","'Crimson+Text',serif")
+        .style("font-family","'Crimson Text',serif")
         .style("font-size",12)
         .style("text-transform","capitalize")
 

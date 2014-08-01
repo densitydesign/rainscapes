@@ -35,7 +35,7 @@ button.navbar-toggle{
 }
 
 #of{
-	font-family: "Crimson+Text", Georgia, serif;
+	font-family: "Crimson Text", Georgia, serif;
 	font-weight: 400;
 	font-size:17pt;
 	font-style: italic;
@@ -55,7 +55,7 @@ button.navbar-toggle{
 }
 
 #intro_bottom{
-	font-family: "Crimson+Text", Georgia, serif;
+	font-family: "Crimson Text", Georgia, serif;
 	font-weight: 400;
 	font-size:10pt;
 	font-style: italic;
@@ -131,7 +131,7 @@ div#start.row:hover{
 }
 
 #select-start{
-	font-family: "Crimson+Text", Georgia, serif;
+	font-family: "Crimson Text", Georgia, serif;
 	font-weight: 400;
 	font-size:23pt;
 	letter-spacing: 1px;
@@ -139,7 +139,7 @@ div#start.row:hover{
 }
 
 .select-state{
-	font-family: "Crimson+Text", Georgia, serif;
+	font-family: "Crimson Text", Georgia, serif;
 	font-weight: 400;
 	font-size:12pt;
 	letter-spacing: 1px;
@@ -373,20 +373,20 @@ div#start.row:hover{
 }
 
 .head2{
-	font-family: "Crimson", serif;
+	font-family: "Crimson Text", serif;
 	font-size: 20pt;
 	color:#e96633;
 	margin-top: 40px;
 }
 
 .subtitle {
-	font-family: "Crimson", serif;
+	font-family: "Crimson Text", serif;
 	font-size: 20pt;
 	color:#ccc;
 }
 
 .paragraph {
-    font-family: "Crimson", serif;
+    font-family: "Crimson Text", serif;
 	font-size: 15pt;
 	line-height: 1.6;
 	color:#323132;
@@ -394,7 +394,7 @@ div#start.row:hover{
 }
 
 .paragraph-who {
-    font-family: "Crimson", serif;
+    font-family: "Crimson Text", serif;
 	font-size: 15pt;
 	line-height: 1.6;
 	color:#323132;
@@ -402,7 +402,7 @@ div#start.row:hover{
 }
 
 .section-paragraph{
-	font-family: "Crimson", serif;
+	font-family: "Crimson Text", serif;
 	font-size: 15pt;
 	line-height: 1.6;
 	color:#323132;
@@ -415,7 +415,7 @@ div#start.row:hover{
 }
 
 .little-title{
-	font-family: "Crimson", serif;
+	font-family: "Crimson Text", serif;
 	font-size: 15pt;
 	font-weight: bold;
 	font-style:italic;
@@ -437,7 +437,7 @@ div#start.row:hover{
 }
 
 .link-par{
-	font-family: "Crimson", serif;
+	font-family: "Crimson Text", serif;
 	font-size: 15pt;
 	font-style: semibold;
 	line-height: 1.6;
@@ -450,13 +450,13 @@ div#start.row:hover{
 }
 
 .orpello{
-	font-family: "Crimson", serif;
+	font-family: "Crimson Text", serif;
 	font-size: 13pt;
 	color:#e96633;
 }
 
 .lat-lon{
-	font-family: "Crimson", serif;
+	font-family: "Crimson Text", serif;
 	font-size: 13pt;
 	font-weight:bold;
 	font-style:italic;
@@ -561,7 +561,7 @@ rect.cursor, path.player {
 }
 
 #info{
-	font-family:"Crimson+Text";
+	font-family:"Crimson Text";
 	color:white;
 	font-size:14px;
 	position:absolute;
