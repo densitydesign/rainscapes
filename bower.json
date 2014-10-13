@@ -1,0 +1,32 @@
+{
+  "name": "Rainscapes",
+  "version": "1.0.0",
+  "homepage": "http://labs.densitydesign.org/rainscapes",
+  "authors": [
+    "DensityDesign (http://www.densitydesign.org)"
+  ],
+  "description": "visualizing 10 years of weather data on the US west coast",
+  "keywords": [
+    "data",
+    "visualization",
+    "weather",
+    "climate",
+    "west",
+    "coast",
+    "climate",
+    "crush"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "d3": "~3.4.9"
+  }
+}

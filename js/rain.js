@@ -267,8 +267,8 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             .attr("y1",height-160+i*20+10)
             .attr("x2",timescale(ext[1]))
             .attr("y2",height-160+i*20+10)
-            .style("stroke-width",0.1)
-            .style("opacity",0.9)
+            .style("stroke-width",1)
+            .style("opacity",0.3)
             .style("stroke","#333")
 
         interface.append("text")
@@ -278,7 +278,7 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             .style("fill","white")
             .style("stroke","none")
             //.style("font-size",12)
-            .style("font-family","'Crimson+Text',Serif")
+            .style("font-family","'Roboto',Serif")
             .text(function(){
                 if(i==0) return "Hail"
                 else if(i==1) return "Thunderstom"
@@ -293,15 +293,15 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             .attr("x",0)
             .attr("y",0)
             .attr("transform","translate("+(timescale(ext[0])-10)+","+(height-161+i*20+5)+")rotate(45)")
-            .attr("width",10)
-            .attr("height",10)
+            .attr("width",7)
+            .attr("height",7)
             .style("stroke","none")
-            .style('fill',function(){
-                if(i==0) return "#367085"
-                else if(i==1) return "#554B79"
-                else if(i==2) return "#F27338"
-                else if(i==3) return "#FEAE22"
-                else return "#81969B"
+             .style('fill',function(){
+                if(i==0) return "#A17DC6"
+                else if(i==1) return "#05918A"
+                else if(i==2) return "#F9B318"
+                else if(i==3) return "#C16556"
+                else return "#21496D"
             })
  
 
@@ -320,12 +320,12 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             else if(e.EVENT_TYPE==="Tornado") return height-160+85;
         })
 
-        .style("fill",function(e){
-            if(e.EVENT_TYPE==="Hail") return "#367085";
-            else if(e.EVENT_TYPE==="Thunderstorm Wind") return "#554B79";
-            else if(e.EVENT_TYPE==="Wildfire") return "#F27338";
-            else if(e.EVENT_TYPE==="Drought") return "#FEAE22";
-            else if(e.EVENT_TYPE==="Tornado") return "#81969B";
+         .style("fill",function(e){
+            if(e.EVENT_TYPE==="Hail") return "#A17DC6";
+            else if(e.EVENT_TYPE==="Thunderstorm Wind") return "#05918A";
+            else if(e.EVENT_TYPE==="Wildfire") return "#F9B318";
+            else if(e.EVENT_TYPE==="Drought") return "#C16556";
+            else if(e.EVENT_TYPE==="Tornado") return "#21496D";
         })
         .attr("width",1)
         .attr("height",8)
@@ -517,7 +517,7 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
 
 
 
-                d3.select(this)
+               cursorg
                     .attr("transform", "translate(" + xdrag + "," + (height-110) + ")")
 
                 var dat = timescale.invert(xdrag)
@@ -704,13 +704,13 @@ function ready(error, centers,states, raindata, coords, disasters,sum) {
             .attr("cy",0)
             .attr("r",3)
             .attr("transform",function(e){return "translate("+projection([parseFloat(e.BEGIN_LON), parseFloat(e.BEGIN_LAT)])+")rotate(45)"})
-            .attr("fill",function(e){
-                if(e.EVENT_TYPE==="Hail") return "#367085";
-                else if(e.EVENT_TYPE==="Thunderstorm Wind") return "#554B79";
-                else if(e.EVENT_TYPE==="Wildfire") return "#F27338";
-                else if(e.EVENT_TYPE==="Drought") return "#FEAE22";
-                else if(e.EVENT_TYPE==="Tornado") return "#81969B";
-            })
+             .style("fill",function(e){
+            if(e.EVENT_TYPE==="Hail") return "#A17DC6";
+            else if(e.EVENT_TYPE==="Thunderstorm Wind") return "#05918A";
+            else if(e.EVENT_TYPE==="Wildfire") return "#F9B318";
+            else if(e.EVENT_TYPE==="Drought") return "#C16556";
+            else if(e.EVENT_TYPE==="Tornado") return "#21496D";
+        })
             .attr("stroke","none")
             //.style('fill', 'url(#vertical)')
             .attr("stroke-width",2)
