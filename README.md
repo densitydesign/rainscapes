@@ -1,8 +1,8 @@
-rainscapes
+Rainscapes
 ==========
 
-*10 YEARS of WEST COAST RAINY WEATHER*
-------------------------------------
+**10 years of west coast rainy weather**
+
 
 RAINSCAPES is an interactive visualization that aims to show the variable amount of precipitations and weather related events during a time span of ten years on the United States west coast.
 
